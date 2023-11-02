@@ -12,7 +12,7 @@ A HTML page with curated list of Python frameworks!
 
 ### Step 1: Setup Development Environment
 
-This project is built with [`bottle.py`](https://bottle.org/), fork and clone this repository, and run
+This project is built with [`bottle.py`](https://bottlepy.org/), fork and clone this repository, and run
 
 ```bash
 $ python frameworks.py

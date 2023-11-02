@@ -54,6 +54,10 @@ If you need a new category of Python framework, then wrap the card like this:
 
 Review the updates at your local, if everything looks good, then create a pull request to the `main` branch here.
 
+### License
+
+MIT License
+
 
 - - -
 

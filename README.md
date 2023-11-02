@@ -2,10 +2,10 @@
 
 A HTML page with curated list of Python frameworks!
 
-[Python Frameworks](https://pythonframeworks.com)
 
-![image](static/image/screenshot.png)
+[![image](static/image/screenshot.png)](https://pythonframeworks.com/)
 
+[https://pythonframeworks.com/](https://pythonframeworks.com/)
 
 ## How to Contribute?
 

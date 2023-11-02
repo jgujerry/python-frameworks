@@ -2,7 +2,7 @@
 
 A HTML page with curated list of Python frameworks!
 
-<center>[Python Frameworks](https://pythonframeworks.com)</center>
+[Python Frameworks](https://pythonframeworks.com)
 
 ![image](static/image/screenshot.png)
 

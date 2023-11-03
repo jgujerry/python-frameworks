@@ -56,11 +56,11 @@ Review the updates at your local, if everything looks good, then create a pull r
 
 
 
-### Question
+## Contact
 
 If you have any question about this opinionated list, do not hesitate to contact me [@jerrygubytes](https://twitter.com/jerrygubytes) on X (Twitter) or open an issue on GitHub.
 
 
-### License
+## License
 
 MIT

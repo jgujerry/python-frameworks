@@ -7,8 +7,8 @@ A HTML page with curated list of Python frameworks!
 
 [https://pythonframeworks.com/](https://pythonframeworks.com/)
 
-## How to Contribute?
 
+## Contribution
 
 ### Step 1: Setup Development Environment
 
@@ -54,11 +54,13 @@ If you need a new category of Python framework, then wrap the card like this:
 
 Review the updates at your local, if everything looks good, then create a pull request to the `main` branch here.
 
-### License
-
-MIT License
 
 
-- - -
+### Question
 
 If you have any question about this opinionated list, do not hesitate to contact me [@jerrygubytes](https://twitter.com/jerrygubytes) on X (Twitter) or open an issue on GitHub.
+
+
+### License
+
+MIT

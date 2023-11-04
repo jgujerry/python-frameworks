@@ -1496,29 +1496,22 @@
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="static/js/masonry.pkgd.min.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="static/js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="static/js/masonry.pkgd.min.js"></script>
   <script type="text/javascript">
-    setTimeout(function () {
-      var msnry = new Masonry('.grids');
-      msnry.layout();
-    }, 100);
-
-    setTimeout(function () {
-      var msnry = new Masonry('.grids');
-      msnry.layout();
-    }, 300);
-
-    setTimeout(function () {
-      var msnry = new Masonry('.grids');
-      msnry.layout();
-    }, 1000);
-
-    setTimeout(function () {
-      var msnry = new Masonry('.grids');
-      msnry.layout();
-    }, 5000);
+    var $groups = document.querySelectorAll('.grids');
+    $groups.forEach(function($grids) {
+      var msnry = new Masonry($grids, {
+        itemSelector: '.col-12',
+        percentPosition: true
+      });
+      $images = $grids.querySelectorAll('img');
+      imagesLoaded($images, function(){
+        msnry.layout();
+      });
+    });
   </script>
   <!-- Footer End -->
 </body>

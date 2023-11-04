@@ -1500,10 +1500,25 @@
   <script type="text/javascript" src="static/js/masonry.pkgd.min.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script type="text/javascript">
-    Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+    setTimeout(function () {
       var msnry = new Masonry('.grids');
       msnry.layout();
-    });
+    }, 100);
+
+    setTimeout(function () {
+      var msnry = new Masonry('.grids');
+      msnry.layout();
+    }, 300);
+
+    setTimeout(function () {
+      var msnry = new Masonry('.grids');
+      msnry.layout();
+    }, 1000);
+
+    setTimeout(function () {
+      var msnry = new Masonry('.grids');
+      msnry.layout();
+    }, 5000);
   </script>
   <!-- Footer End -->
 </body>

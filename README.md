@@ -42,7 +42,7 @@ If you need a new category of Python framework, then wrap the card like this:
 <h3 class="mt-5 display-6">Category Name</h3>
 <p>Description of this category</p>
 
-<div class="row mt-4" data-masonry='{"percentPosition": true }'>
+<div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
     <div class="col-sm-6 col-lg-3 mb-4">
         <div class="card">
             ...

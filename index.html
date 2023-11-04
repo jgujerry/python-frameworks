@@ -57,7 +57,7 @@
       With Python, developers can focus on building features and functionality, leveraging existing tools and resources to streamline the development process.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card">
           <a class="m-3" href="https://www.djangoproject.com/" target="_blank">
@@ -362,7 +362,7 @@
       Python's well-documented libraries and support for microservices make it an ideal choice for building versatile and efficient REST APIs.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card">
           <a href="https://fastapi.tiangolo.com/" target="_blank">
@@ -563,7 +563,7 @@
        various use cases and requirements.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card text-center">
@@ -691,7 +691,7 @@
       libraries and frameworks that simplify the development and deployment of ML, DL, and AI models.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card p-3">
@@ -907,7 +907,7 @@
       particularly in scenarios where background processing and real-time event handling are critical.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card">
@@ -1008,7 +1008,7 @@
       real-time analytics, and other computationally intensive tasks.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card">
           <div class="card-body text-center">
@@ -1102,7 +1102,7 @@
       Python's flexibility, rich ecosystem, and ease of use make it well-suited for developing and maintaining data pipelines and workflow automation systems.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card">
@@ -1297,7 +1297,7 @@
       configuration management, orchestration, and infrastructure as code.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card p-3 text-center">
@@ -1411,7 +1411,7 @@
       web crawling becomes an ideal solution for tasks such as data mining, content aggregation, and competitive analysis.
     </p>
 
-    <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card">
@@ -1499,6 +1499,12 @@
   <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="static/js/masonry.pkgd.min.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script type="text/javascript">
+    Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+      var msnry = new Masonry('.grids');
+      msnry.layout();
+    });
+  </script>
   <!-- Footer End -->
 </body>
 

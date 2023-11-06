@@ -10,18 +10,20 @@ A HTML page with curated list of Python frameworks!
 
 ## Contribution
 
-### Step 1: Setup Development Environment
+#### Step 1: Clone the Repository
 
-This project is built with [`bottle.py`](https://bottlepy.org/), fork and clone this repository, and run
+Fork and clone this repository, and run
 
 ```bash
 $ python frameworks.py
 ```
 
-Then visit `http://localhost:8080/`, there's no third-party dependencies.
+Then visit `http://localhost:8080/`.
+
+This project is built with [`bottle.py`](https://bottlepy.org/), there're no third-party dependencies.
 
 
-### Step 2: Add a Bootstrap Card
+#### Step 2: Add a Card
 
 Add a Bootstrap card element, like this:
 ```html
@@ -31,9 +33,10 @@ Add a Bootstrap card element, like this:
     </div>
 </div>
 ```
-The `card` element would include the `name`, `link`, `logo` and `description` of the framework. You can decarate it by using [Bootstrap Card Class](https://getbootstrap.com/docs/5.0/components/card/) with your preference.
+The `card` element would include the `name`, `link`, `logo` and `description` of the framework.
+You can decarate it by using [Bootstrap Card Class](https://getbootstrap.com/docs/5.0/components/card/) with your preference.
 
-If you need a new category of Python framework, then wrap the card like this:
+If you need a new category for a Python framework, try this:
 
 ```html
 
@@ -51,7 +54,6 @@ If you need a new category of Python framework, then wrap the card like this:
 </div>
 ```
 
-
 Review the updates at your local, if everything looks good, then create a pull request to the `main` branch here.
 
 
@@ -63,4 +65,4 @@ If you have any question about this opinionated list, do not hesitate to contact
 
 ## License
 
-MIT
+This project is released under [MIT License](LICENSE)

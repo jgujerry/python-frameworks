@@ -22,10 +22,40 @@
     color: #000;
     text-decoration: none;
   }
+
+  #top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #105028;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+    border: 1px solid #105028;
+  }
+
+  #top-button:hover {
+    background-color: #105028;
+    color: #fff;
+  }
 </style>
 </head>
 
 <body style="font-family:-apple-system,BlinkMacSystemFont,Roboto,Roboto Slab,Droid Serif,Segoe UI,system-ui,Arial,sans-serif;">
+  <button onclick="topFunction()" id="top-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+  </button>
   <div class="container">
     <h1 class="mt-5 mb-2 display-4">
       <img src="static/image/logo.png" style="height:60px;width:60px">
@@ -2285,6 +2315,7 @@
   <script type="text/javascript" src="static/js/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="static/js/masonry.pkgd.min.js"></script>
   <script type="text/javascript">
+    // Ensure images loaded before masonry
     var $groups = document.querySelectorAll('.grids');
     $groups.forEach(function($grids) {
       var msnry = new Masonry($grids, {
@@ -2296,6 +2327,21 @@
         msnry.layout();
       });
     });
+
+    // Go to Top
+    let mybutton = document.getElementById("top-button");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
   </script>
   <!-- Footer End -->
 </body>

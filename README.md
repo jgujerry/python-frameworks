@@ -10,7 +10,7 @@ A HTML page with curated list of Python frameworks!
 
 ## Contribution
 
-#### Step 1: Clone the Repository
+#### Step 1: Clone this Repo
 
 Fork and clone this repository, and run
 
@@ -18,12 +18,10 @@ Fork and clone this repository, and run
 $ python frameworks.py
 ```
 
-Then visit `http://localhost:8080/`.
-
-This project is built with [`bottle.py`](https://bottlepy.org/), there're no third-party dependencies.
+Then visit [`http://localhost:8080/`](http://localhost:8080/). Local development is supported by [`bottle.py`](https://bottlepy.org/)
 
 
-#### Step 2: Add a Card
+#### Step 2: Add a Framework
 
 Add a Bootstrap card element, like this:
 ```html

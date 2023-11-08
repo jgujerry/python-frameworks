@@ -1391,9 +1391,9 @@
         <div class="card">
           <div class="card-body">
             <a href="https://luigi.readthedocs.io/" target="_blank">
-              <img class="card-img-top" src="static/image/logos/luigi.png" alt="Luigi">
+              <img class="card-img-top" src="static/image/logos/luigi.png" style="width: 70%; height: auto;" alt="Luigi">
             </a>
-            <h5 class="card-title mt-3"><a href="https://luigi.readthedocs.io/" target="_blank">Luigi</a></h5>
+            <h4 class="card-title mt-3"><a href="https://luigi.readthedocs.io/" target="_blank">Luigi</a></h4>
             <hr class="my-2">
             <p class="card-text">
               Luigi is a Python package that helps you build complex pipelines of batch jobs.
@@ -1562,6 +1562,107 @@
 
     <hr class="my-4">
 
+    <!--Serverless-->
+    <h3 class="mt-4 display-6">Serverless</h3>
+    <p>
+      Serverless offers benefits like automatic scaling, reduced operational overhead, and cost-efficiency,
+      as you only pay for actual usage. Python frameworks are exceptionally compatible with serverless architecture,
+      as they provide rapid development capabilities and seamless deployment to serverless platforms,
+      aligning with the agility and scalability demands of modern cloud-based architectures.
+    </p>
+
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card p-3">
+          <a href="https://github.com/zappa/Zappa" target="_blank">
+            <img class="card-img-top" src="static/image/logos/zappa.jpeg" alt="Zappa">
+          </a>
+          <figure class="p-3 mb-0">
+            <blockquote class="blockquote">
+              <p>Zappa makes it super easy to build and deploy server-less, event-driven Python applications.</p>
+            </blockquote>
+            <footer class="blockquote-footer mt-2">Serverless Python</footer>
+          </figure>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card">
+          <a href="https://localstack.cloud/" target="_blank">
+            <img class="card-img-top p-3" src="static/image/logos/localstack.svg" style="background-color: #3E3174; width:100%; height:auto;" alt="MLflow">
+          </a>
+          <div class="card-body">
+            <p class="card-text mt-3"><small class="text-muted">
+              <a href="https://github.com/localstack" target="_blank">LocalStack</a>
+              is a cloud service emulator that runs in a single container on your laptop or in your CI environment.
+            </small></p>
+            <hr class="my-2">
+            <p class="card-text">A fully functional local AWS cloud stack. Develop and test your cloud & Serverless apps offline.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <a href="https://aws.github.io/chalice/" target="_blank">
+              <img class="card-img-top" src="static/image/logos/chalice.png" alt="Chalice">
+            </a>
+            <h5 class="card-title mt-3"><a href="https://github.com/aws/chalice" target="_blank">Chalice</a></h5>
+            <hr class="my-2">
+            <p class="card-text">
+              Python Serverless Microframework for AWS.
+            </p>
+            <p><small class="text-muted">
+              Chalice is a framework for writing serverless apps in python. It allows you to quickly create and deploy applications that use AWS Lambda.
+            </small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card text-end">
+          <div class="p-3">
+            <a href="https://github.com/nficano/python-lambda" target="_blank">
+              <img class="card-img-top" src="static/image/logos/python-lambda.svg" style="width: 50%; height: auto;" alt="python-lambda">
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mt-3"><a href="https://github.com/nficano/python-lambda" target="_blank">Python Lambda</a></h5>
+            <p class="card-text"><small>
+              Python-lambda is a toolset for developing and deploying serverless Python code in AWS Lambda.
+            </small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card">
+          <div class="card-header" style="background-color: #8d6e62;">
+            <h2>
+              <a href="https://mangum.io/" style="color: #fff;" target="_blank">
+                Mangum
+              </a>
+            </h2>
+          </div>
+          <div class="card-body">
+            <blockquote class="mb-0">
+              <p>
+                <a href="https://github.com/jordaneremieff/mangum" target="_blank">Mangum</a> is an adapter for running ASGI applications
+                in AWS Lambda to handle Function URL, API Gateway, ALB, and Lambda
+              </p>
+              <footer class="blockquote-footer mt-2 text-end">AWS Lambda support for ASGI applications.</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--End of Serverless-->
+
+    <hr class="my-4">
+
     <!--DevOps-->
     <h3 class="mt-4 display-6">DevOps</h3>
     <p>
@@ -1689,7 +1790,7 @@
       </div>
 
     </div>
-    <!--End of Data Workflow & Pipeline-->
+    <!--End of DevOps-->
 
     <hr class="my-4">
 
@@ -1790,7 +1891,7 @@
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card p-3">
           <a href="https://roniemartinez.github.io/dude/" target="_blank">
-            <h2 style="background-color: #2094f3">Dude</h2>
+            <h2 style="background-color: #2094f3; color:#fff">Dude</h2>
           </a>
           <hr class="my-2">
           <figure class="p-2 mb-0">
@@ -2011,36 +2112,21 @@
       </div>
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
-        <div class="card">
-          <div class="cart-title text-center">
-            <a href="https://toga.readthedocs.io/en/latest/" target="_blank">
-              <img class="card-img-top p-1" src="static/image/logos/toga.png" style="width:40%; height:auto;" alt="toga">
-            </a>
-            <hr class="my-2">
-            <h3><a href="https://github.com/beeware/toga" target="_blank">toga</a></h3>
-          </div>
-          <div class="card-body text-center">
-            <p class="card-text">
-              <small>
-                Toga is a Python native, OS native, cross platform GUI toolkit.
-              </small>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-3 mb-4">
-        <div class="card">
-          <div class="cart-title text-center">
-            <a href="https://urwid.org/" target="_blank">
-              <img class="card-img-top p-1" src="static/image/logos/urwid.png" style="width:40%; height:auto;" alt="urwid">
+        <div class="card text-center">
+          <div class="cart-title">
+            <a href="https://github.com/ceccopierangiolieugenio/pyTermTk" target="_blank">
+              <img class="card-img-top p-1" src="static/image/logos/pyTermTk.png" style="width:100%; height:auto;" alt="pyTermTk">
             </a>
           </div>
           <div class="card-body">
-            <h3 class="text-center"><a href="https://github.com/urwid/urwid" target="_blank">Urwid</a></h3>
+            <h3><a href="https://github.com/ceccopierangiolieugenio/pyTermTk" target="_blank">pyTermTk</a></h3>
             <p class="card-text">
+              (python Terminal Toolkit) is a Text-based user interface library (TUI)
+            </p>
+            <p class="card-text text-muted">
               <small>
-                Urwid is a console user interface library for Python on Linux, OSX, Cygwin or other unix-like OS.
+                Evolved from the discontinued project pyCuT and inspired by a mix of Qt5,GTK,
+                and tkinter api definition with a touch of personal interpretation.
               </small>
             </p>
           </div>
@@ -2064,21 +2150,18 @@
       </div>
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
-        <div class="card text-center">
-          <div class="cart-title">
-            <a href="https://github.com/ceccopierangiolieugenio/pyTermTk" target="_blank">
-              <img class="card-img-top p-1" src="static/image/logos/pyTermTk.png" style="width:100%; height:auto;" alt="pyTermTk">
+        <div class="card">
+          <div class="cart-title text-center">
+            <a href="https://toga.readthedocs.io/en/latest/" target="_blank">
+              <img class="card-img-top p-1" src="static/image/logos/toga.png" style="width:40%; height:auto;" alt="toga">
             </a>
+            <hr class="my-2">
+            <h3><a href="https://github.com/beeware/toga" target="_blank">toga</a></h3>
           </div>
-          <div class="card-body">
-            <h3><a href="https://github.com/ceccopierangiolieugenio/pyTermTk" target="_blank">pyTermTk</a></h3>
+          <div class="card-body text-center">
             <p class="card-text">
-              (python Terminal Toolkit) is a Text-based user interface library (TUI)
-            </p>
-            <p class="card-text text-muted">
               <small>
-                Evolved from the discontinued project pyCuT and inspired by a mix of Qt5,GTK,
-                and tkinter api definition with a touch of personal interpretation.
+                Toga is a Python native, OS native, cross platform GUI toolkit.
               </small>
             </p>
           </div>
@@ -2106,6 +2189,23 @@
         </div>
       </div>
 
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card">
+          <div class="cart-title text-center">
+            <a href="https://urwid.org/" target="_blank">
+              <img class="card-img-top p-1" src="static/image/logos/urwid.png" style="width:40%; height:auto;" alt="urwid">
+            </a>
+          </div>
+          <div class="card-body">
+            <h3 class="text-center"><a href="https://github.com/urwid/urwid" target="_blank">Urwid</a></h3>
+            <p class="card-text">
+              <small>
+                Urwid is a console user interface library for Python on Linux, OSX, Cygwin or other unix-like OS.
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
 
     </div>
     <!--End of GUI & GUI-->
@@ -2218,6 +2318,33 @@
 
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card">
+          <div class="cart-title text-center">
+            <a href="https://www.renpy.org/" target="_blank">
+              <img class="card-img-top p-1" src="static/image/logos/renpy.png" style="width:40%; height:auto;" alt="RenPy">
+            </a>
+            <h3><a href="https://www.renpy.org/" target="_blank">Ren'Py</a></h3>
+          </div>
+          <div class="card-body text-center">
+            <figure class="p-3 mb-0">
+              <blockquote class="blockquote">
+                <p>
+                  <a href="https://www.renpy.org/" target="_blank">
+                    Ren'Py is a visual novel engine
+                  </a>
+                </p>
+              </blockquote>
+            </figure>
+            <p class="card-text">
+              <small>
+                Used by thousands of creators from around the world
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card">
           <div class="card-body text-end">
             <h3><a href="https://pyopengl.sourceforge.net/" target="_blank">PyOpenGL</a></h3>
             <p class="card-text text-muted mt-3"><small>The Python OpenGL Binding</small></p>
@@ -2245,33 +2372,6 @@
               <hr class="mb-2">
               <footer class="blockquote-footer mt-2">Python ctypes wrapper around SDL2</footer>
             </blockquote>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-3 mb-4">
-        <div class="card">
-          <div class="cart-title text-center">
-            <a href="https://www.renpy.org/" target="_blank">
-              <img class="card-img-top p-1" src="static/image/logos/renpy.png" style="width:40%; height:auto;" alt="RenPy">
-            </a>
-            <h3><a href="https://www.renpy.org/" target="_blank">Ren'Py</a></h3>
-          </div>
-          <div class="card-body text-center">
-            <figure class="p-3 mb-0">
-              <blockquote class="blockquote">
-                <p>
-                  <a href="https://www.renpy.org/" target="_blank">
-                    Ren'Py is a visual novel engine
-                  </a>
-                </p>
-              </blockquote>
-            </figure>
-            <p class="card-text">
-              <small>
-                Used by thousands of creators from around the world
-              </small>
-            </p>
           </div>
         </div>
       </div>

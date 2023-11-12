@@ -18,7 +18,9 @@ Fork and clone this repository, and run
 $ python frameworks.py
 ```
 
-Then visit [`http://localhost:8080/`](http://localhost:8080/). Local development is supported by [`bottle.py`](https://bottlepy.org/)
+Then visit [`http://localhost:8080/`](http://localhost:8080/).
+
+Local development is supported by [`bottle.py`](https://bottlepy.org/)
 
 
 #### Step 2: Add a Framework

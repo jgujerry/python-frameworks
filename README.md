@@ -60,7 +60,7 @@ Review the updates at your local, if everything looks good, then create a pull r
 
 ## Contact
 
-If you have any question about this opinionated list, do not hesitate to contact me [@jgu103](https://twitter.com/jgu103) on X (Twitter) or open an issue on GitHub.
+If you have any question about this opinionated list, do not hesitate to contact me [@jgujerry](https://twitter.com/jgujerry) on X (Twitter) or open an issue on GitHub.
 
 
 ## License

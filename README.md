@@ -10,18 +10,17 @@ A HTML page with curated list of Python frameworks!
 
 ## Contribution
 
-#### Clone this Repo
+#### Development Environment
 
-Fork and clone this repository, and run
+Local development is supported by [`bottle.py`](https://bottlepy.org/). Fork and clone this repository, and run
 
 ```bash
-$ python frameworks.py
+$ python3 frameworks.py
 ```
 
 Then visit [`http://localhost:8080/`](http://localhost:8080/).
 
-Local development is supported by [`bottle.py`](https://bottlepy.org/)
-
+That's it!
 
 #### Add a Framework?
 

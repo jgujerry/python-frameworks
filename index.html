@@ -23,44 +23,15 @@
     text-decoration: none;
   }
 
-  #navbarToggler {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    cursor: pointer;
-    color: #000;
-    cursor: pointer;
-  }
-  #navbarToggler > button {
-    height: 40px;
-    width: 45px;
-    background-color: #fff;
-    border-radius: 4px;
-    border: 1px solid #105028;
-  }
-  #navbarToggler > button > span {
-    font-size: 14px;
-    color:#105028;
-  }
-  #navbarCollapse {
-    position: fixed;
-    top: 75px;
-    right: 15px;
-    background-color: #fdfffe;
-    z-index: 1000;
-  }
-  #navbarCollapse > ul > li > a {
-    text-align: end;
-    margin-right: 10px;
-    color:#105028;
-    font-size: 12px;
-  }
-  #navbarCollapse > ul > li > a:hover {
-    font-weight: bold;
+  #nav-grid > .row > .themed-grid-col {
+    border: 1px dotted #dbd9d9ee;
+    color: #105028;
+    font-size: 13px;
+    font-weight: light;
+    border-radius: 3px;
   }
 
-  #goTopBtn {
+  #top-button {
     height: 40px;
     width: 45px;
     display: none;
@@ -81,7 +52,7 @@
     border: 1px solid #105028;
   }
 
-  #goTopBtn:hover {
+  #top-button:hover {
     background-color: #105028;
     color: #fff;
   }
@@ -89,65 +60,6 @@
 </head>
 
 <body style="font-family:-apple-system,BlinkMacSystemFont,Roboto,Roboto Slab,Droid Serif,Segoe UI,system-ui,Arial,sans-serif;">
-
-  <div id="navbarToggler" class="navbar navbar-light small">
-    <button class="navbar-toggler" type="button" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-  <div id="navbarCollapse" class="collapse navbar-collapse rounded">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#PythonFrameworks"><u>Python Frameworks</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Apps"><u>Apps</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#APIs"><u>APIs</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#CMS"><u>CMS</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#ML,DL&AI"><u>ML, DL &AI</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#TaskQueue&Messaging"><u>Task Queues & Messaging</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Parallel&DistributedComputing"><u>Parallel & Distributed Computing</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Worflow&Pipelines"><u>Workflow & Pipelines</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Serverless"><u>Serverless</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Microservices"><u>Microservices</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#DevOps"><u>DevOps</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#WebCrawling/Scraping"><u>Web Crawling / Scraping</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#ApplicationIntegrations"><u>Application Integrations</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#GUI&TUI"><u>GUI & TUI</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Games"><u>Games</u></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#AutomatedTesting"><u>Automated Testing</u></a>
-      </li>
-    </ul>
-  </div>
-
   <div id="PythonFrameworks" class="container">
     <h1 class="mt-5 mb-2 display-4">
       <img src="static/image/logo.png" style="height:60px;width:60px">
@@ -171,6 +83,65 @@
       anything in between. This versatile language offers a rich selection of options that empower you to create outstanding solutions and deliver excellence to
       change the world right way.
     </p>
+    <div id="nav-grid">
+      <div class="row mb-3 text-center mt-5">
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#Apps">Apps</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#APIs">APIs</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#CMS">CMS</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#ML,DL&AI">ML, DL &AI</a>
+        </div>
+      </div>
+
+      <div class="row mb-3 text-center">
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#TaskQueue&Messaging">Task Queues & Messaging</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#Parallel&DistributedComputing">Parallel & Distributed Computing</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#Worflow&Pipelines">Workflow & Pipelines</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#Serverless">Serverless</a>
+        </div>
+      </div>
+
+      <div class="row mb-3 text-center">
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#Microservices">Microservices</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#DevOps">DevOps</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#WebCrawling/Scraping">Web Crawling / Scraping</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#ApplicationIntegrations">Application Integrations</a>
+        </div>
+      </div>
+
+      <div class="row mb-3 text-center">
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#GUI&TUI">GUI & TUI</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#Games">Games</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col">
+          <a class="nav-link text-muted" href="#AutomatedTesting">Automated Testing</a>
+        </div>
+        <div class="col-sm-6 col-md-3 themed-grid-col"></div>
+      </div>
+    </div>
 
     <!-- ================Web Application================ -->
     <h3 id="Apps" class="mt-5 display-6">Apps</h3>
@@ -3064,7 +3035,7 @@
 
     <hr class="my-4">
 
-    <button onclick="goTopFunction()" id="goTopBtn">
+    <button onclick="goTopFunction()" id="top-button">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
       </svg>
@@ -3076,7 +3047,7 @@
   <!-- Footer -->
   <footer class="footer mt-4">
     <div class="container footer-container">
-      <div class="row footer-navbar mt-3 mb-4">
+      <div class="row footer mt-3 mb-4">
         <div class="col-12">
           <span>© 2023-2024 PythonFrameworks.com</span>
         </div>
@@ -3101,26 +3072,8 @@
       });
     });
 
-    // Collapsible Navbar
-    var navbarToggler = document.getElementById("navbarToggler");
-    var navbarCollapse = document.getElementById("navbarCollapse");
-
-    navbarToggler.addEventListener("click", function() {
-      navbarCollapse.style.display = navbarCollapse.style.display === "block" ? "none" : "block";
-    });
-
-    navbarCollapse.addEventListener("click", function(event) {
-      navbarCollapse.style.display = "none";
-    });
-
-    document.addEventListener("click", function(event) {
-      if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
-        navbarCollapse.style.display = "none";
-      }
-    });
-
     // Go to Top
-    let mybutton = document.getElementById("goTopBtn");
+    let mybutton = document.getElementById("top-button");
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {

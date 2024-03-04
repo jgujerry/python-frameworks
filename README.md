@@ -54,12 +54,12 @@ If you need a new category for Python frameworks, try this:
 </div>
 ```
 
-And, update the navbar links,
+And, update the nav grid links,
 
 ```html
-<li class="nav-item">
+<div class="col-6 col-sm-6 col-md-3 themed-grid-col">
     <a class="nav-link" href="#CategoryName"><u>Category Name</u></a>
-</li>
+</div>
 ```
 
 Review the updates at your local, if everything looks good, then create a pull request to the `main` branch here.

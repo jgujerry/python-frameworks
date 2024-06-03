@@ -46,11 +46,11 @@ If you need a new category for Python frameworks, try this:
 <p>Description of this category</p>
 
 <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
-    <div class="col-sm-6 col-lg-3 mb-4">
-        <div class="card">
-            ...
-        </div>
+  <div class="col-sm-6 col-lg-3 mb-4">
+    <div class="card">
+        ...
     </div>
+  </div>
 </div>
 ```
 
@@ -58,11 +58,11 @@ And, update the nav grid links,
 
 ```html
 <div class="col-6 col-sm-6 col-md-3 themed-grid-col">
-    <a class="nav-link" href="#CategoryName"><u>Category Name</u></a>
+  <a class="nav-link" href="#CategoryName"><u>Category Name</u></a>
 </div>
 ```
 
-Review the updates at your local, if everything looks good, then create a pull request to the `main` branch here.
+Review the update at your local, if everything looks good, then create a pull request to the `main` branch here.
 
 
 

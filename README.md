@@ -42,23 +42,17 @@ If you need a new category for Python frameworks, try this:
 ```html
 <hr class="my-4">
 
-<h3 id="CategoryName" class="mt-5 display-6">Category Name</h3>
-<p>Description of this category</p>
+<div class="category" id="CategoryName">
+    <h3 class="mt-5 display-6">Category Name</h3>
+    <p>Description of this category</p>
 
-<div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
-  <div class="col-sm-6 col-lg-3 mb-4">
-    <div class="card">
-        ...
+    <div class="row grids mt-4" data-masonry='{"percentPosition": true }'>
+        <div class="col-sm-6 col-lg-3 mb-4">
+            <div class="card">
+                ...
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-```
-
-And, update the nav grid links,
-
-```html
-<div class="col-6 col-sm-6 col-md-3 themed-grid-col">
-  <a class="nav-link" href="#CategoryName"><u>Category Name</u></a>
 </div>
 ```
 

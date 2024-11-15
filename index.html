@@ -3743,8 +3743,8 @@
 
       tagCloudContainer.innerHTML = '';
 
-      const minFontSize = 1.0;
-      const maxFontSize = 1.0;
+      const minFontSize = 0.8;
+      const maxFontSize = 0.8;
       const maxCount = Math.max(...Object.values(categoryCounts));
       const minCount = Math.min(...Object.values(categoryCounts));
 
@@ -3757,7 +3757,7 @@
         link.href = `#${category}`;
         link.textContent = category;
         link.style.fontSize = `${weight}rem`;
-        link.style.color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+        link.style.color = `#105028`;
         link.setAttribute('data-weight', count);
 
         listItem.appendChild(link);

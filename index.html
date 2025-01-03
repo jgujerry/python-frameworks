@@ -3683,7 +3683,7 @@
     <div class="container footer-container">
       <div class="row footer mt-3 mb-4">
         <div class="col-12">
-          <span>©2024 PythonFrameworks.com</span>
+          <span>©<span id="current-year"></span> PythonFrameworks.com</span>
         </div>
       </div>
     </div>
@@ -3693,6 +3693,11 @@
   <script type="text/javascript" src="static/js/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="static/js/masonry.pkgd.min.js"></script>
   <script type="text/javascript">
+    // Get current year
+    function getCurrentYear() {
+      return new Date().getFullYear();
+    }
+
     // Ensure images loaded before masonry
     var $groups = document.querySelectorAll('.grids');
     $groups.forEach(function($grids) {
@@ -3765,6 +3770,7 @@
       });
     }
 
+    document.getElementById("current-year").textContent = getCurrentYear();
     document.addEventListener('DOMContentLoaded', createTagCloud);
 
   </script>

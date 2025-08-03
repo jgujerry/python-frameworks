@@ -3919,10 +3919,18 @@
 
       tagCloudContainer.innerHTML = '';
 
-      const minFontSize = 0.8;
-      const maxFontSize = 0.8;
+      const minFontSize = 0.7;
+      const maxFontSize = 1.0;
       const maxCount = Math.max(...Object.values(categoryCounts));
       const minCount = Math.min(...Object.values(categoryCounts));
+
+      const getColor = (count) => {
+        if (count >= maxCount * 0.8) return '#2c5282'; // Dark blue for highest counts
+        if (count >= maxCount * 0.6) return '#38a169'; // Green for high counts
+        if (count >= maxCount * 0.4) return '#805ad5'; // Purple for medium counts
+        if (count >= maxCount * 0.2) return '#d53f8c'; // Pink for low counts
+        return '#718096';                              // Gray for lowest counts
+      };
 
       Object.entries(categoryCounts).forEach(([category, count]) => {
         const weight = ((count - minCount) / (maxCount - minCount)) * (maxFontSize - minFontSize) + minFontSize;
@@ -3933,7 +3941,8 @@
         link.href = `#${category}`;
         link.textContent = category;
         link.style.fontSize = `${weight}rem`;
-        link.style.color = `#105028`;
+        // link.style.color = `#105028`;
+        link.style.color = getColor(count);
         link.setAttribute('data-weight', count);
 
         listItem.appendChild(link);

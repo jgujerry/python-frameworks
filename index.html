@@ -80,7 +80,7 @@
     position: relative;
     padding: 0.125rem 0.25rem;
     transition: color 0.25s, transform 0.15s;
-  }
+}
 
   ul.cloud a:hover,
   ul.cloud a:focus {
@@ -105,6 +105,19 @@
   ul.cloud a:focus::before,
   ul.cloud a:hover::before {
     width: 100%;
+  }
+
+ul.cloud a:after {
+    content: "🔗";
+    font-size: 0.4em;
+    position: relative;
+    top: -0.5em;
+    margin-left: 2px;
+    opacity: 0.5;
+}
+
+  ul.cloud a:hover:after {
+    opacity: 1;
   }
 
   /* Reduce motion for users with preferences */

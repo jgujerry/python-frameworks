@@ -80,7 +80,7 @@
     position: relative;
     padding: 0.125rem 0.25rem;
     transition: color 0.25s, transform 0.15s;
-}
+  }
 
   ul.cloud a:hover,
   ul.cloud a:focus {
@@ -107,23 +107,142 @@
     width: 100%;
   }
 
-ul.cloud a:after {
-    content: "🔗";
-    font-size: 0.4em;
-    position: relative;
-    top: -0.5em;
-    margin-left: 2px;
-    opacity: 0.5;
-}
-
-  ul.cloud a:hover:after {
-    opacity: 1;
+  ul.cloud a:after {
+      content: "🔗";
+      font-size: 0.4em;
+      position: relative;
+      top: -0.5em;
+      margin-left: 2px;
+      opacity: 0.5;
   }
 
-  /* Reduce motion for users with preferences */
+  /* Top navigation custom buttons */
+  .navbar-nav .nav-link.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.35rem;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    border: 2px solid;
+  }
+
+  .navbar-nav .nav-link.btn-outline-success {
+    border-color: #198754;
+    color: #198754;
+  }
+
+  .navbar-nav .nav-link.btn-outline-success:hover {
+    background-color: #198754;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(25, 135, 84, 0.3);
+  }
+
+  .navbar-nav .nav-link.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+  }
+
+  .navbar-nav .nav-link.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+  }
+
+  .navbar-nav .nav-link.btn:hover {
+    transform: translateY(-1px);
+  }
+
+  /* Tag Cloud Styling */
+  ul.cloud {
+    gap: 0.8rem;
+  }
+
+  ul.cloud li {
+    margin: 0.4rem 0.2rem;
+  }
+
+  ul.cloud a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    padding: 0.2rem 0.45rem;
+    background-color: #fff;
+    border: 2px solid #7cae8c; /* lighter green outline */
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    font-weight: 400;
+    font-size: 0.65rem;
+    text-decoration: none;
+    position: relative;
+    color: #105028;
+  }
+
+  ul.cloud a:hover,
+  ul.cloud a:focus {
+    background-color: #105028;
+    color: #ffffff !important;
+    border-color: #105028;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  ul.cloud a:hover .badge,
+  ul.cloud a:focus .badge {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #fff;
+  }
+
+  ul.cloud a::before {
+    content: "";
+    display: none;
+  }
+
+  ul.cloud a::after {
+    content: "";
+    display: none;
+  }
+
+  ul.cloud a .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(96, 120, 96, 0.85), rgba(112, 160, 112, 0.85)); /* darker green */
+    color: #fff;
+    padding: 0.1rem 0.3rem;
+    border-radius: 6px;
+    font-size: 0.6em;
+    font-weight: 600;
+    margin-left: 0.15rem;
+    min-width: 1.2em;
+    text-align: center;
+    line-height: 1;
+    vertical-align: middle;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
   @media (prefers-reduced-motion) {
     ul.cloud * {
       transition: none !important;
+    }
+  }
+
+  /* Responsive navbar brand text */
+  .navbar-brand-text {
+    color: #105028;
+    font-weight: 300;
+    margin-bottom: 0;
+    font-size: 2.5rem; /* display-5 size */
+    line-height: 1.2;
+  }
+
+  @media (max-width: 991px) {
+    .navbar-brand-text {
+      font-size: 1.55rem; /* h3 size on tablet */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .navbar-brand-text {
+      font-size: 1.25rem; /* h5 size on mobile */
     }
   }
 
@@ -131,17 +250,28 @@ ul.cloud a:after {
 </head>
 
 <body style="font-family:-apple-system,BlinkMacSystemFont,Roboto,Roboto Slab,Droid Serif,Segoe UI,system-ui,Arial,sans-serif;">
-  <div id="PythonFrameworks" class="container">
-    <h1 class="mt-5 mb-2 display-4">
-      <img src="static/image/logo.png" style="height:60px;width:60px">
-      <a href="/" style="color:#105028"><b>Python Frameworks</b></a>
-    </h1>
-    <div class="row mt-4">
-      <div class="col-12">
-        <a class="github-button" href="https://github.com/jgujerry/pythonframeworks" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star jgujerry/pythonframeworks on GitHub">Star</a>
-        <a class="github-button" href="https://github.com/jgujerry/pythonframeworks/fork" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork jgujerry/pythonframeworks on GitHub">Fork</a>
+<!-- top navigation bar -->
+    <nav class="navbar navbar-expand navbar-light bg-white my-5" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+          <img src="static/image/logo.png" alt="Logo" height="60" class="me-2">
+          <span class="navbar-brand-text">Python Frameworks</span>
+        </a>
+        <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse show" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item me-2">
+              <a id="star-btn" class="btn btn-outline-success nav-link" href="https://github.com/jgujerry/pythonframeworks" target="_blank" rel="noopener" aria-label="Star on GitHub">Star ★</a>
+            </li>
+            <li class="nav-item">
+              <a id="fork-btn" class="btn btn-outline-secondary nav-link" href="https://github.com/jgujerry/pythonframeworks/fork" target="_blank" rel="noopener" aria-label="Fork on GitHub">Fork ⑂</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   </div>
 
   <!-- Content -->
@@ -4105,17 +4235,17 @@ ul.cloud a:after {
 
       tagCloudContainer.innerHTML = '';
 
-      const minFontSize = 0.7;
+      const minFontSize = 0.6;
       const maxFontSize = 0.9;
       const maxCount = Math.max(...Object.values(categoryCounts));
       const minCount = Math.min(...Object.values(categoryCounts));
 
       const getColor = (count) => {
-        if (count >= maxCount * 0.8) return '#2c5282'; // Dark blue for highest counts
-        if (count >= maxCount * 0.6) return '#38a169'; // Green for high counts
-        if (count >= maxCount * 0.4) return '#805ad5'; // Purple for medium counts
-        if (count >= maxCount * 0.2) return '#d53f8c'; // Pink for low counts
-        return '#718096';                              // Gray for lowest counts
+        if (count >= maxCount * 0.8) return '#105028'; // Dark green for highest counts
+        if (count >= maxCount * 0.6) return '#156741'; // Medium green for high counts
+        if (count >= maxCount * 0.4) return '#1d7d3a'; // Medium-light green for medium counts
+        if (count >= maxCount * 0.2) return '#2b8a4d'; // Light green for low counts
+        return '#3d9156';                               // Lighter green for lowest counts
       };
 
       Object.entries(categoryCounts).forEach(([category, count]) => {
@@ -4125,11 +4255,21 @@ ul.cloud a:after {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
         link.href = `#${category}`;
-        link.textContent = category;
+        
+        // Create category name with count badge
+        const categoryText = document.createElement('span');
+        categoryText.textContent = category;
+        link.appendChild(categoryText);
+        
+        const badge = document.createElement('span');
+        badge.className = 'badge';
+        badge.textContent = count;
+        link.appendChild(badge);
+        
         link.style.fontSize = `${weight}rem`;
-        // link.style.color = `#105028`;
         link.style.color = getColor(count);
         link.setAttribute('data-weight', count);
+        link.setAttribute('title', `${count} framework(s) in ${category}`);
 
         listItem.appendChild(link);
         tagCloudContainer.appendChild(listItem);
@@ -4139,6 +4279,22 @@ ul.cloud a:after {
     document.getElementById("current-year").textContent = getCurrentYear();
     document.addEventListener('DOMContentLoaded', createTagCloud);
 
+  </script>
+  <script>
+    // update star/fork counts using GitHub API
+    fetch('https://api.github.com/repos/jgujerry/pythonframeworks')
+      .then(res => res.json())
+      .then(data => {
+        const star = document.getElementById('star-btn');
+        const fork = document.getElementById('fork-btn');
+        if (star && data.stargazers_count !== undefined) {
+          star.textContent = `Star ★ ${data.stargazers_count}`;
+        }
+        if (fork && data.forks_count !== undefined) {
+          fork.textContent = `Fork ⑂ ${data.forks_count}`;
+        }
+      })
+      .catch(err => console.error('GitHub API error', err));
   </script>
   <!-- Footer End -->
 </body>

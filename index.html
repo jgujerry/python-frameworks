@@ -154,43 +154,30 @@
 
   /* Tag Cloud Styling */
   ul.cloud {
-    gap: 0.8rem;
+    gap: 0.4rem 1rem;
+    justify-content: center;
+    padding: 1rem 0;
   }
 
   ul.cloud li {
-    margin: 0.4rem 0.2rem;
+    margin: 0.2rem 0.3rem;
   }
 
   ul.cloud a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.15rem;
-    padding: 0.2rem 0.45rem;
-    background-color: #fff;
-    border: 2px solid #7cae8c; /* lighter green outline */
-    border-radius: 8px;
-    transition: all 0.25s ease;
-    font-weight: 400;
-    font-size: 0.65rem;
-    text-decoration: none;
+    display: inline-block;
     position: relative;
-    color: #105028;
-  }
-
-  ul.cloud a:hover,
-  ul.cloud a:focus {
-    background-color: #105028;
-    color: #ffffff !important;
-    border-color: #105028;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  }
-
-  ul.cloud a:hover .badge,
-  ul.cloud a:focus .badge {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.6);
-    color: #fff;
+    padding: 0 0.9em 0 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--tag-color) !important;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    white-space: nowrap;
   }
 
   ul.cloud a::before {
@@ -198,25 +185,39 @@
     display: none;
   }
 
+  /* link icon right of text */
   ul.cloud a::after {
-    content: "";
-    display: none;
+    content: "\1F517";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 0.5em;
+    line-height: 1;
+    opacity: 0.5;
+    transition: opacity 0.18s ease;
+  }
+
+  ul.cloud a:hover,
+  ul.cloud a:focus {
+    opacity: 0.75;
+    transform: translateY(-1px);
+    outline: none;
+    text-decoration: none;
+  }
+
+  ul.cloud a:hover::after,
+  ul.cloud a:focus::after {
+    opacity: 0.9;
+  }
+
+  ul.cloud a:active {
+    transform: translateY(0);
   }
 
   ul.cloud a .badge {
-    display: inline-block;
-    background: linear-gradient(135deg, rgba(96, 120, 96, 0.85), rgba(112, 160, 112, 0.85)); /* darker green */
-    color: #fff;
-    padding: 0.1rem 0.3rem;
-    border-radius: 6px;
-    font-size: 0.6em;
-    font-weight: 600;
-    margin-left: 0.15rem;
-    min-width: 1.2em;
-    text-align: center;
-    line-height: 1;
-    vertical-align: middle;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    display: none;
   }
 
   @media (prefers-reduced-motion) {
@@ -4255,41 +4256,56 @@
 
       tagCloudContainer.innerHTML = '';
 
-      const minFontSize = 0.6;
-      const maxFontSize = 0.9;
+      const minFontSize = 0.82;
+      const maxFontSize = 1.15;
       const maxCount = Math.max(...Object.values(categoryCounts));
       const minCount = Math.min(...Object.values(categoryCounts));
 
-      const getColor = (count) => {
-        if (count >= maxCount * 0.8) return '#105028'; // Dark green for highest counts
-        if (count >= maxCount * 0.6) return '#156741'; // Medium green for high counts
-        if (count >= maxCount * 0.4) return '#1d7d3a'; // Medium-light green for medium counts
-        if (count >= maxCount * 0.2) return '#2b8a4d'; // Light green for low counts
-        return '#3d9156';                               // Lighter green for lowest counts
-      };
+      // Vibrant multi-color palette: [bg, color, border, hover, glow, badgeBg]
+      const palette = [
+        ['#dbeafe', '#1d4ed8', '#93c5fd', '#1d4ed8', 'rgba(29,78,216,0.30)', 'rgba(29,78,216,0.12)'],   // blue
+        ['#dcfce7', '#15803d', '#86efac', '#15803d', 'rgba(21,128,61,0.30)',  'rgba(21,128,61,0.12)'],   // green
+        ['#ffedd5', '#c2410c', '#fdba74', '#c2410c', 'rgba(194,65,12,0.30)',  'rgba(194,65,12,0.12)'],   // orange
+        ['#ede9fe', '#6d28d9', '#c4b5fd', '#6d28d9', 'rgba(109,40,217,0.30)', 'rgba(109,40,217,0.12)'],  // purple
+        ['#ccfbf1', '#0f766e', '#5eead4', '#0f766e', 'rgba(15,118,110,0.30)', 'rgba(15,118,110,0.12)'],  // teal
+        ['#fce7f3', '#be185d', '#f9a8d4', '#be185d', 'rgba(190,24,93,0.30)',  'rgba(190,24,93,0.12)'],   // pink
+        ['#fef9c3', '#854d0e', '#fde047', '#a16207', 'rgba(161,98,7,0.30)',   'rgba(161,98,7,0.12)'],    // amber
+        ['#e0e7ff', '#3730a3', '#a5b4fc', '#3730a3', 'rgba(55,48,163,0.30)',  'rgba(55,48,163,0.12)'],   // indigo
+        ['#fee2e2', '#b91c1c', '#fca5a5', '#b91c1c', 'rgba(185,28,28,0.30)',  'rgba(185,28,28,0.12)'],   // red
+        ['#f0fdf4', '#166534', '#bbf7d0', '#166534', 'rgba(22,101,52,0.30)',  'rgba(22,101,52,0.12)'],   // emerald
+        ['#fff7ed', '#9a3412', '#fed7aa', '#9a3412', 'rgba(154,52,18,0.30)',  'rgba(154,52,18,0.12)'],   // burnt
+        ['#f0f9ff', '#0369a1', '#7dd3fc', '#0369a1', 'rgba(3,105,161,0.30)',  'rgba(3,105,161,0.12)'],   // sky
+      ];
+
+      const hashStr = (s) => [...s].reduce((h, c) => (Math.imul(31, h) + c.charCodeAt(0)) | 0, 0);
 
       Object.entries(categoryCounts).forEach(([category, count]) => {
         const weight = ((count - minCount) / (maxCount - minCount)) * (maxFontSize - minFontSize) + minFontSize;
+        const [bg, color, border, hover, glow, badgeBg] = palette[Math.abs(hashStr(category)) % palette.length];
 
-        // Create the list item with a link
         const listItem = document.createElement('li');
         const link = document.createElement('a');
         link.href = `#${category}`;
-        
-        // Create category name with count badge
+
+        link.style.setProperty('--tag-bg',       bg);
+        link.style.setProperty('--tag-color',    color);
+        link.style.setProperty('--tag-border',   border);
+        link.style.setProperty('--tag-hover',    hover);
+        link.style.setProperty('--tag-glow',     glow);
+        link.style.setProperty('--tag-shadow',   glow);
+        link.style.setProperty('--tag-badge-bg', badgeBg);
+        link.style.fontSize = `${weight}rem`;
+        link.setAttribute('data-weight', count);
+        link.setAttribute('title', `${count} framework(s) in ${category}`);
+
         const categoryText = document.createElement('span');
         categoryText.textContent = category;
         link.appendChild(categoryText);
-        
+
         const badge = document.createElement('span');
         badge.className = 'badge';
         badge.textContent = count;
         link.appendChild(badge);
-        
-        link.style.fontSize = `${weight}rem`;
-        link.style.color = getColor(count);
-        link.setAttribute('data-weight', count);
-        link.setAttribute('title', `${count} framework(s) in ${category}`);
 
         listItem.appendChild(link);
         tagCloudContainer.appendChild(listItem);

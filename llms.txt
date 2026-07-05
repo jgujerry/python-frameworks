@@ -1,0 +1,61 @@
+# Python Frameworks
+
+> A curated, community-maintained directory of popular Python frameworks, libraries, and tools — organized by category. Covers web development, REST APIs, ML/AI, LLM agents, task queues, web scraping, GUI/TUI, automated testing, DevOps, games, and enterprise integrations.
+
+Site: https://pythonframeworks.com/
+Source: https://github.com/jgujerry/pythonframeworks
+
+## Categories
+
+### Web Apps
+Full-stack and WSGI/ASGI Python web frameworks. Includes Django, Flask, FastAPI, Starlette, Bottle, Tornado, CherryPy, Pyramid, Quart, Sanic, Litestar, and more.
+
+### Web APIs
+Frameworks for building REST and GraphQL APIs. Includes FastAPI, Django REST Framework (DRF), Flask-RESTful, Litestar, Connexion, Graphene, Ariadne, and more.
+
+### Content Management System (CMS)
+Python-based CMS frameworks. Includes Django CMS, Wagtail, Mezzanine, Plone, and more.
+
+### ML, DL, and AI
+Machine learning and deep learning frameworks. Includes PyTorch, TensorFlow, scikit-learn, Keras, JAX, MXNet, PaddlePaddle, and more.
+
+### LLM, Gen-AI, and Agents
+Frameworks for building LLM-powered applications, generative AI, and autonomous agents. Includes LangChain, LangGraph, LlamaIndex, AutoGen, CrewAI, Haystack, Semantic Kernel, DSPy, and more.
+
+### Task Queue and Messaging
+Distributed task queue and message broker integrations. Includes Celery, RQ, Dramatiq, Huey, and more.
+
+### Parallel and Distributed Computing
+Frameworks for parallel and distributed workloads. Includes Ray, Dask, PySpark (Apache Spark), and more.
+
+### Workflow and Pipelines
+Workflow orchestration and data pipeline tools. Includes Apache Airflow, Prefect, Dagster, Luigi, Metaflow, and more.
+
+### Serverless
+Python frameworks for serverless and cloud functions. Includes Chalice, Zappa, Mangum, and more.
+
+### DevOps
+Infrastructure automation and DevOps tools. Includes Fabric, Ansible, SaltStack, and more.
+
+### Web Crawling and Scraping
+Web scraping and crawling frameworks. Includes Scrapy, Scrapling, BeautifulSoup, Firecrawl, Crawlee, MechanicalSoup, Trafilatura, Crawl4AI, and more.
+
+### GUI and TUI Apps
+Desktop GUI and terminal UI frameworks. Includes Tkinter, PyQt, Kivy, wxPython, Textual, Rich, and more.
+
+### Games
+Python game development frameworks. Includes Pygame, Arcade, Pyglet, Panda3D, and more.
+
+### Automated Testing
+Testing and quality assurance frameworks. Includes pytest, unittest, behave, Robot Framework, nose2, Splinter, PentestGPT, and more.
+
+### Enterprise Integrations
+Enterprise messaging and integration frameworks. Includes confluent-kafka, Apache Spark connectors, and more.
+
+## Notes for AI Agents
+
+- All frameworks listed are Python-based, open-source, and actively maintained (or historically significant).
+- Each framework card links to its official GitHub repository.
+- The directory is a single-page application — all content is on the root URL.
+- Categories are navigable via anchor links: https://pythonframeworks.com/#Web-Apps, https://pythonframeworks.com/#LLM-Gen-AI-and-Agents, etc.
+- The site is updated regularly; check the GitHub repository for the latest additions.

@@ -22,28 +22,6 @@ bottle.py             # Vendored single-file WSGI framework (do not edit)
 
 ---
 
-## Categories
-
-| Category | Description |
-|---|---|
-| Web Apps | Full-stack and WSGI/ASGI frameworks (Django, Flask, FastAPI, …) |
-| Web APIs | REST and GraphQL API frameworks |
-| CMS | Content management systems |
-| ML, DL, and AI | Machine learning and deep learning frameworks |
-| LLM, Gen-AI, and Agents | LLM orchestration and AI agent frameworks |
-| Task Queue and Messaging | Distributed task queues and message brokers |
-| Parallel and Distributed Computing | Parallel and distributed workload frameworks |
-| Workflow and Pipelines | Workflow orchestration and data pipeline tools |
-| Serverless | Python serverless and cloud-function frameworks |
-| DevOps | Infrastructure automation and DevOps tools |
-| Web Crawling and Scraping | Web scraping and crawling frameworks |
-| GUI and TUI Apps | Desktop GUI and terminal UI frameworks |
-| Games | Game development frameworks |
-| Automated Testing | Testing and QA frameworks |
-| Enterprise Integrations | Enterprise messaging and integration tools |
-
----
-
 ## Contributing
 
 Contributions are welcome — new frameworks, updated logos, better descriptions, and bug fixes are all appreciated.
